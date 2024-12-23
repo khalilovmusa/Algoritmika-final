@@ -1,0 +1,38 @@
+.login-wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-header{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.login-input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 374px;
+
+    >input{
+        height: 50px;
+        width: 100%;
+        position: relative;
+    }
+
+    >label{
+        position: relative;
+        top: 10%;
+        left: 0;
+    }
+}
+
+.sign-in-btn{
+    margin-top: 10px;
+    width: 30%;
+}
