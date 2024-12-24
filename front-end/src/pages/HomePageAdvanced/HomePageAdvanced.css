@@ -1,6 +1,7 @@
 .homepage-advanced-wrapper{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .option-part{
@@ -42,4 +43,18 @@
     >label{
         font-size: 14px;
     }
+}
+
+.price-wrapper{
+    margin-top: 20px;
+}
+
+.from-input,
+.to-input{
+    height: 50px;
+    width: 160px;
+}
+
+.issue-wrapper{
+    margin-top: 10px;
 }

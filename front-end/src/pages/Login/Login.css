@@ -35,4 +35,9 @@
 .sign-in-btn{
     margin-top: 10px;
     width: 30%;
+    background: #833AE0;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
 }

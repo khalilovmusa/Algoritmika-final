@@ -5,15 +5,16 @@ import { useEffect, useState } from "react";
 import HomePageCoins from "../HomePageCoins/HomePageCoins";
 import './HomePage.css';
 import HomePageAdvanced from "../HomePageAdvanced/HomePageAdvanced";
-
+import { useDispatch } from "react-redux";
+import { setHomeCoins } from "../../app/HomePageSlicer/HomePageSlice";
 
 const HomePage = () => {
-
+    const dispatch = useDispatch();
     const [toggleAdvanced, setToggleAdvanced] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:3000/').then((res) => {return res.json()}).then((data) => console.log(data))
-    })
+        fetch('http://localhost:3000/').then((res) => { return res.json() }).then((data) => dispatch(setHomeCoins(data)))
+    });
 
     return (
         <div className="homepage-wrapper">

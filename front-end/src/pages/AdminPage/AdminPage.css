@@ -1,0 +1,88 @@
+.adminpage-wrapper{
+    padding: 50px;
+}
+
+.admin-panel-header{
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.adminpage-input-wrapper{
+    margin-top: 20px;
+}
+
+.admin-input-label{
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 1%;
+}
+
+.admin-search-wrapper{
+    height: 50px;
+}
+
+.admin-search-input{
+    height: 100%;
+    width: 375px;
+}
+
+.admin-search-button{
+    background: #833AE0;
+    color: #fff;
+    margin-left: 2%;
+    border: none;
+    height: 100%;
+    width: 120px;
+    cursor: pointer;
+}
+
+/*Coins css*/
+
+.admin-coins-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 1%;
+}
+
+.admin-coin{
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.admin-coin-img{
+    height: 100%;
+    padding-right: 2%;
+}
+
+
+.admin-coin-header{
+    color: #833AE0;
+    font-weight: 900;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.admin-coin-short-desc{
+    max-width: 250px;
+}
+
+.admin-btn-wrapper{
+    padding-top: 10px;
+}
+
+.admin-delete-btn,
+.admin-edit-btn{
+    height: 50px;
+    width: 120px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    background: lightgray;
+}

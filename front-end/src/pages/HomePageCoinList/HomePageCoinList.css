@@ -1,0 +1,47 @@
+.coinlist-wrapper{
+    padding: 20px;
+}
+
+.coinlist-panel-header{
+    display: block;
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.homepage-coinlist{
+    color: lightgray;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.homepage-underline{
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.coinlist-input-wrapper{
+    padding-top: 1%;
+}
+
+.coinlist-input-label{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.coinlist-search-wrapper{
+    height: 50px;
+}
+
+.coinlist-search-input{
+    height: 100%;
+    width: 375px;
+}
+
+.coinlist-search-button{
+    background: #833AE0;
+    color: #fff;
+    border: none;
+    padding: 17px 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}

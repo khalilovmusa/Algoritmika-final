@@ -28,22 +28,22 @@ const HomePageAdvanced = () => {
                     <p>Price</p>
                     <label>
                         From
-                        <input className="" />
+                        <input type="number" className="from-input" />
                     </label>
                     <label htmlFor="">
                         To
-                        <input />
+                        <input type="number" className="to-input" />
                     </label>
                 </div>
                 <div className="issue-wrapper">
                     <p>Year of issue</p>
                     <label>
                         From
-                        <input />
+                        <input type="number" className="from-input" />
                     </label>
                     <label htmlFor="">
                         To
-                        <input />
+                        <input type="number" className="to-input" />
                     </label>
                 </div>
             </div>
