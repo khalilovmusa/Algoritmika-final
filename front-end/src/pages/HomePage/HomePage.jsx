@@ -18,15 +18,18 @@ const HomePage = () => {
 
     return (
         <div className="homepage-wrapper">
-            HomePage
-            <div className="homepage-input-wrapper">
+            <span>HomePage</span>
+            <div className="homepage-input-wrapper" >
                 <label className="input-label" htmlFor="home-search">Input field</label>
                 <input className="search-input" name="home-search" />
                 <button className="search-button" >Search</button>
             </div>
+            <div className="advanced-wrapper">
             <a className="advanced" onClick={() => setToggleAdvanced(!toggleAdvanced)} href="#"><span>Advanced Filter</span> {toggleAdvanced ? <img src={dropdown_icon_up} /> : <img src={dropdown_icon_down} />}</a>
+
+            </div>
             {toggleAdvanced ? <HomePageAdvanced /> : <HomePageCoins />}
-        </div>
+        </div >
     )
 }
 

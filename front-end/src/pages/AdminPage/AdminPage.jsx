@@ -48,7 +48,14 @@ const AdminPage = () => {
                 </div>
 
 
+                <div className="admin-add-coin-wrapper">
+                    <a href="#" className="admin-add-coin-anchor">
+                        <div className="admin-add-coin-circle">+</div>
+                        <p className="admin-add-coin-text">Add a new coin</p>
+                    </a>
+                </div>
             </div>
+            
             { }
         </div>
     )

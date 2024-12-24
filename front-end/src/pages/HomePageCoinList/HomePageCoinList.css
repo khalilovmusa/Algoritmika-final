@@ -45,3 +45,23 @@
     margin-left: 15px;
     cursor: pointer;
 }
+
+@media (max-width: 1000px) {
+    .coin-image{
+        height: 120px;
+        width: 120px;
+    }
+    .coin-header{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+    .coin-image{
+        height: 100px;
+        width: 100px;
+    }
+    .coin-header{
+        font-size: 16px;
+    }
+}
