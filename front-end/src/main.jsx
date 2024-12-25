@@ -8,6 +8,7 @@ import { store } from './app/store.js';
 import { Provider } from 'react-redux';
 import ListOfCoins from './pages/ListOfCoins/ListOfCoins.jsx';
 import HomePageCoinList from './pages/HomePageCoinList/HomePageCoinList.jsx';
+import AdminCoinAdd from './pages/AdminCoinAdd/AdminCoinAdd.jsx';
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store} >
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/coinlist" element={<HomePageCoinList />} />
+        <Route path="/coin-add" element={<AdminCoinAdd />} />
       </Routes>
     </BrowserRouter>
   </Provider>

@@ -1,0 +1,16 @@
+input{
+    height: 50px;
+    width: 270px;
+}
+
+.admin-panel-coin-add-wrapper{
+    display: flex;
+    padding: 50px;
+    gap: 20px;
+
+    >div{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
