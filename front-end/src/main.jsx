@@ -1,18 +1,17 @@
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router";
-import './index.css'
+import { store } from './app/store.js';
+import { Provider } from 'react-redux';
 import HomePage from './pages/HomePage/HomePage.jsx';
 import AdminPage from './pages/AdminPage/AdminPage.jsx';
 import Login from './pages/Login/Login.jsx';
-import { store } from './app/store.js';
-import { Provider } from 'react-redux';
 import HomePageCoinList from './pages/HomePageCoinList/HomePageCoinList.jsx';
 import AdminCoinAdd from './pages/AdminCoinAdd/AdminCoinAdd.jsx';
 import ProtectedRoute from './pages/utils/ProtectedRoute.jsx';
-import HomePageAdvanced from './pages/HomePageAdvanced/HomePageAdvanced.jsx';
 import FilteredCoinList from './pages/FilteredCoinList/FilteredCoinList.jsx';
 import CoinDetails from './pages/CoinDetails/CoinDetails.jsx';
 import AdminCoinEdit from './pages/AdminCoinEdit/AdminCoinEdit.jsx';
+import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store} >

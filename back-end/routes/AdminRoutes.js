@@ -42,39 +42,6 @@ router.post('/login', (req, res) => {
     })
 });
 
-// router.post('/login', (req, res) => {
-//     const username = req.body.username;
-//     const password = req.body.password;
-
-//     connection.query('SELECT username, password FROM user WHERE username=?', [username], (err, result) => {
-//         if (err) {
-//             console.log(err);
-//             res.status(500).json({ isAuth: false, error: "Database query error" });
-//             return;
-//         }
-
-//         if (result.length === 0) {
-//             res.json({ isAuth: false });
-//             return;
-//         }
-
-//         const adminPassword = result[0].password;
-
-//         bcrypt.compare(password, adminPassword, (err, isMatching) => {
-//             if (err) {
-//                 console.log(`An error occurred while matching passwords: ${err}`);
-//                 res.status(500).json({ isAuth: false, error: "Password comparison error" });
-//                 return;
-//             }
-//             if (isMatching) {
-//                 res.json({ isAuth: true, user: { username } });
-//             } else {
-//                 res.json({ isAuth: false });
-//             }
-//         });
-//     });
-// });
-
 
 
 router.get('/dashboard', (req, res) => {
