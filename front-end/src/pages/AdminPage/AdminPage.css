@@ -222,3 +222,17 @@
         height: 100px;
     }
 }
+
+.admin-panel-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-logout{
+    height: 40px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #833AE0;
+    color: #fff;
+    cursor: pointer;
+}

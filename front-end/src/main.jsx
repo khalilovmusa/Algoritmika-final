@@ -22,6 +22,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/admin/delete/:id" element={<AdminPage />} />
           <Route path="/admin/coin-edit/:id" element={<AdminCoinEdit />} />
+          <Route path="/coin-add" element={<AdminCoinAdd />} />
         </Route>
 
         <Route path="/" element={<HomePage />} />
@@ -29,7 +30,6 @@ createRoot(document.getElementById('root')).render(
         <Route path="/login" element={<Login />} />
         <Route path="/category/:id" element={<HomePageCoinList />} />
         <Route path="/coin-details/:id" element={<CoinDetails />} />
-        <Route path="/coin-add" element={<AdminCoinAdd />} />
       </Routes>
     </BrowserRouter>
   </Provider>
