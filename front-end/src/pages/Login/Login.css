@@ -41,3 +41,10 @@
     padding: 15px 20px;
     cursor: pointer;
 }
+
+.error-login{
+    color: red;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

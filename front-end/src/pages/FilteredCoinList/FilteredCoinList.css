@@ -1,0 +1,95 @@
+/* .coin-filter-list{
+    padding: 50px 0px;
+    display: block;
+}
+
+.coin-item{
+    display: flex;
+    padding: 20px 0;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px 30px;
+}
+
+.filter-coin-img{
+    height: 200px;
+    width: 200px;
+}
+
+.filter-header{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.filter-main-part{
+    margin-left: 20px;
+    >p{
+        font-size: 15px;
+    }
+} */
+
+.coin-filter-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .coin-item {
+    display: flex;
+    flex-direction: row;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .coin-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .filter-coin-img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .filter-main-part {
+    padding: 15px;
+  }
+  
+  .filter-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .filter-country,
+  .filter-metal,
+  .filter-quality,
+  .filter-price,
+  .filter-year {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  @media (max-width: 768px) {
+    .coin-filter-list {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .coin-filter-list {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,61 +1,7 @@
-// import "./AdminCoinAdd.css"
-
-// const AdminCoinAdd = () => {
-//     return (
-//         <form className="admin-panel-coin-add-wrapper">
-//             <span className="admin-header">Admin panel</span>
-//             <div>
-//                 <label htmlFor="add-coin-name">Coin name</label>
-//                 <input name="add-coin-name" type="text" />
-//                 <label htmlFor="add-face-value">Face value</label>
-//                 <input name="add-face-value" type="text" />
-//                 <label htmlFor="add-issue-year">Year of issue</label>
-//                 <input name="add-issue-year" type="text" />
-//                 <label htmlFor="add-price">Price</label>
-//                 <input name="add-price" type="text" />
-//                 <label htmlFor="add-country">Country</label>
-//                 <input name="add-country" type="text" />
-//                 <label htmlFor="add-metal">Metal</label>
-//                 <input name="add-metal" type="text" />
-//             </div>
-//             <div>
-//                 <p className="add-short-description">Short description</p>
-//                 <textarea name="coin-short-desc" id="">
-
-//                 </textarea>
-//                 <p className="add-long-description">Long description</p>
-//                 <textarea name="coin-long-desc" id="">
-
-//                 </textarea>
-//                 <label htmlFor="add-quality">Quality of the coin</label>
-//                 <input name="add-quality" type="text" />
-//                 <label htmlFor="add-weight">Weight</label>
-//                 <input name="add-weight" type="text" />
-//             </div>
-//             <div>
-//                 <div>
-//                     <label htmlFor="add-observe-img">Link to obverse image</label>
-//                     <input name="add-observe-img" type="text" />
-//                     <label htmlFor="add-reverse-img">Link to reverse image</label>
-//                     <input name="add-reverse-img" type="text" />
-//                 </div>
-
-//                 <div>
-//                     <button onClick={() => console.log("save")}>Save</button>
-//                     <button>Cancel</button>
-//                 </div>
-//             </div>
-//         </form>
-//     )
-// }
-
-// export default AdminCoinAdd;
-
 import React, { useState } from "react";
 import "./AdminCoinAdd.css";
 
 const AdminCoinAdd = () => {
-  // State for form inputs
   const [formData, setFormData] = useState({
     name: "",
     face_value: "",
@@ -69,9 +15,9 @@ const AdminCoinAdd = () => {
     weight: "",
     img_obverse: "",
     img_reverse: "",
+    category_id: "",
   });
 
-  // Handle input changes
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
@@ -80,11 +26,10 @@ const AdminCoinAdd = () => {
     }));
   };
 
-  // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/admin/api/add", {
+      const response = await fetch("http://localhost:3000/api/admin/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -153,7 +98,7 @@ const AdminCoinAdd = () => {
         <input
           name="compisition"
           type="text"
-          value={formData.composition}
+          value={formData.compisition}
           onChange={handleInputChange}
         />
       </div>
@@ -170,6 +115,16 @@ const AdminCoinAdd = () => {
           value={formData.full_description}
           onChange={handleInputChange}
         />
+        <select
+          name="category_id"
+          value={formData.category_id}
+          onChange={handleInputChange}
+        >
+          <option value="">Select a category</option>
+          <option value="1">Bullion coin</option>
+          <option value="2">Exclusive coins</option>
+          <option value="3">Commemorative coins</option>
+        </select>
         <label htmlFor="quality">Quality</label>
         <input
           name="quality"
@@ -204,9 +159,11 @@ const AdminCoinAdd = () => {
         </div>
         <div>
           <button type="submit">Save</button>
-          <button type="button" onClick={() => setFormData({})}>
-            Cancel
-          </button>
+          <a href="/admin">
+            <button type="button">
+              Cancel
+            </button>
+          </a>
         </div>
       </div>
     </form>

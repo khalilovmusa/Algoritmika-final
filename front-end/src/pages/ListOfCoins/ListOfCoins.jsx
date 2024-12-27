@@ -1,25 +1,35 @@
-import exclusive_img from "../../assets/Exclusive_coin.png";
+import { useSelector } from "react-redux";
 import "./ListOfCoins.css";
 
 const ListOfCoins = () => {
+    const data = useSelector((state) => state.categoryslice.value);
+
+    if (!data || data.length === 0) {
+        return <p className="coinlist-no-data">No coins available to display.</p>;
+    }
 
     return (
-            <div className="coinlist-coins-wrapper">
-                <div className="coinlist-coin">
-                    <img src={exclusive_img} />
+        <div className="coinlist-coins-wrapper">
+            {data.map((coin) => (
+                <a className="coin-details-anchor" key={coin.coins_id} href={`/coin-details/${coin.coins_id}`}>
+                    <div className="coinlist-coin" key={coin.coins_id}>
+                    <img
+                        src={coin.img_obverse}
+                        alt={`${coin.name} image`}
+                    />
                     <div className="coinlist-coin-description-wrapper">
                         <p className="coinlist-desc-header">
-                            Canadian Beaver
+                            {coin.name}
                         </p>
                         <p className="coinlist-short-description">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Distinctio eum ipsa illo quis repellendus nostrum corrupti ex laborum in voluptatem!
+                            {coin.short_description}
                         </p>
                     </div>
                 </div>
-
-            </div>
-    )
-}
+                </a>
+            ))}
+        </div>
+    );
+};
 
 export default ListOfCoins;

@@ -119,6 +119,15 @@
     margin-left: 20px;
 }
 
+.no-coins-error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-size: 30px;
+    font-weight: 500;
+}
+
 @media (max-width: 760px){
     .adminpage-wrapper{
         padding: 20px;

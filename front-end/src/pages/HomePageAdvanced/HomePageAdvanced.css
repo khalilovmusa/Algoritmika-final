@@ -58,3 +58,15 @@
 .issue-wrapper{
     margin-top: 10px;
 }
+
+.apply-filter-wrapper{
+    text-align: end;
+}
+
+.filter-button{
+    padding: 10px 15px;
+    border: none;
+    background: #833AE0;
+    color: #fff;
+    cursor: pointer;
+}
